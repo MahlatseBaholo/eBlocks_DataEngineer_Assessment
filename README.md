@@ -4,7 +4,8 @@
 2. Script 2- Create a script to import the orders details information into the mysql database.
 3. Script 3- Write a Scala or Python Spark or scala script that would do the following: a. Predict the next order date for a customer, based on his purchase patterns. b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 4. Explain under which conditions you would use MySQL and Mongo?
-5. Explain your choice in context of the CAP Theorem? 6. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
+5. Explain your choice in context of the CAP Theorem?
+6. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
   a. What technologies would you use in the cloud stack?
   b. How would you move data from on premises (MySQL) to the cloud.
 
