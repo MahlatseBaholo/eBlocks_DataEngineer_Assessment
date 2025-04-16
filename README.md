@@ -11,12 +11,17 @@
 You must provide detailed files for script 1, 2 and 3.
 
 # Black Friday 
+
 On the day ofBlackFriday, you realize that you have a large number of orders, explain how you would make changes to your data engineering architecture to be more robust, scalable, reliable and real time.
+
 1. What technologies would you use?
 2. Why would you choose these technologies?
 3. What data patterns would you use ?
   
-# Order Analysis Please provide scripts and results for the following: 
+# Order Analysis
+
+Please provide scripts and results for the following:
+
 1. Which day of the week has the most orders?
 2. Which time of the day do people order the most?
 3. Which order does the user buy first most of the time?
