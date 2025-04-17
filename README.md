@@ -8,8 +8,8 @@
 5. Explain under which conditions you would use MySQL and Mongo?
 6. Explain your choice in context of the CAP Theorem?
 7. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
-  a. What technologies would you use in the cloud stack?
-  b. How would you move data from on premises (MySQL) to the cloud.
+   a. What technologies would you use in the cloud stack?
+   b. How would you move data from on premises (MySQL) to the cloud.
 
 You must provide detailed files for script 1, 2 and 3.
 
