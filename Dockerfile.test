@@ -1,0 +1,18 @@
+FROM bitnami/spark:3.5.0
+
+USER root
+
+# Install pip and required packages
+RUN apt-get update && \
+    apt-get install -y python3-pip ca-certificates curl gnupg && \
+    update-ca-certificates && \
+    pip3 install --no-cache-dir \
+      --trusted-host pypi.org \
+      --trusted-host pypi.python.org \
+      --trusted-host files.pythonhosted.org \
+      pytest pymongo
+
+# Make sure Python can find Spark and Py4J
+ENV PYTHONPATH="/opt/bitnami/spark/python:/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip:${PYTHONPATH}"
+
+USER 1001
