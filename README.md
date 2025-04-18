@@ -11,13 +11,8 @@
 
    MySQL: I would use MySQL because I’m working with structured, relational data that follows a well-defined schema. MySQL is ideal for handling normalized data with clear relationships (e.g., foreign keys) and      is well-suited for operations like joins, aggregations, and complex queries. It also ensures data integrity through ACID compliance, which is important when working with transactional data such as customer        orders and purchase history.
    
-   MongoDB: I would use MongoDB because I’m dealing with semi-structured or evolving data where the schema isn’t fixed and is expected to change over time. MongoDB offers flexibility in how data is modeled and       supports horizontal scalability, making it a good fit for large datasets. It's optimized for fast read/write performance, especially in use cases involving high volumes of data, such as storing user activity       logs, behavioral data, or prediction results that don't necessarily fit into a strict relational model.
-   
-   MySQL is ideal for structured transactional data, especially since the data is relational and requires complex querying.
-
-   MongoDB is suitable for large-scale, unstructured or semi-structured data that requires flexibility and fast, scalable reads/writes.
-   
-   MySQL serves as the main source for structured historical transactional data (orders), while MongoDB is used for storing enriched data, such as predictions.
+   MongoDB: I would use MongoDB because I’m dealing with semi-structured or evolving data where the schema isn’t fixed and is expected to change over time. MongoDB offers flexibility in how data is modeled and       supports horizontal scalability, making it a good fit for large datasets. It's optimized for fast read/write performance, especially in use cases involving high volumes of data, such as storing prediction 
+   results that don't necessarily fit into a strict relational model.
    
 7. Explain your choice in context of the CAP Theorem?
 8. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
