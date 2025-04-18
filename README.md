@@ -6,8 +6,9 @@
    a. Predict the next order date for a customer, based on his purchase patterns.
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 5. Explain under which conditions you would use MySQL and Mongo?
-6. Explain your choice in context of the CAP Theorem?
-7. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
+   MySQL serves as the main source for structured historical transactional data (orders), while MongoDB is used for storing enriched data, such as predictions.
+7. Explain your choice in context of the CAP Theorem?
+8. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
    a. What technologies would you use in the cloud stack?
    b. How would you move data from on premises (MySQL) to the cloud.
 
