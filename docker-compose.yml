@@ -1,9 +1,45 @@
-version: '3.1'
+version: '3.8'
 
 services:
-
-  db:
-    image: mysql
-    restart: always
+  spark:
+    image: bitnami/spark:3.5.0
+    container_name: spark
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      - SPARK_MODE=master
+    volumes:
+      - ./app:/app
+      - ./jars:/extra-jars
+      - ./sql:/sql
+    depends_on:
+      - mysql
+      - mongodb
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: northwind
+      MYSQL_USER: user
+      MYSQL_PASSWORD: rootpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./tests:/tests
+      - ./jars:/extra-jars
+    depends_on:
+      - spark
+    command: ["pytest"]
