@@ -6,6 +6,7 @@
    a. Predict the next order date for a customer, based on his purchase patterns.
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 5. Explain under which conditions you would use MySQL and Mongo?
+   
    MySQL serves as the main source for structured historical transactional data (orders), while MongoDB is used for storing enriched data, such as predictions.
 7. Explain your choice in context of the CAP Theorem?
 8. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
