@@ -136,6 +136,13 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    
       •	Implement row-level or column-level security for sensitive data in Databricks.
 
+      e)	Cost Optimization
+   
+      Goal: Minimize unnecessary spend while still meeting performance and availability needs.
+   
+      Improvements:
+      •	Analyze pipeline logs to reduce redundant transformations or unnecessary storage.
+
 5. What data patterns would you use ?
    
    •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
