@@ -40,7 +40,9 @@
    In this case, MongoDB’s CP characteristics makes it ideal when the data model is more flexible, evolves over time, and scales horizontally.
 
 9. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
+    
    a. What technologies would you use in the cloud stack?
+   
    b. How would you move data from on premises (MySQL) to the cloud.
 
 You must provide detailed files for script 1, 2 and 3.
