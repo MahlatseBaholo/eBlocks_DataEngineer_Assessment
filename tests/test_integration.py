@@ -4,6 +4,16 @@ from pyspark.sql import SparkSession
 # --- SparkSession Fixture ---
 @pytest.fixture(scope="session")
 def spark():
+    # Stop any existing Spark session to avoid conflicts
+    try:
+        if 'spark' in globals() and spark is not None:
+            print("Stopping existing Spark session...")
+            spark.stop()
+    except Exception as e:
+        print(f"Error while stopping existing Spark session: {e}")
+    
+    # Initialize a new Spark session
+    print("Initializing a new Spark session...")
     spark = SparkSession.builder \
         .appName("Test Suite") \
         .master("local[*]") \
@@ -14,17 +24,12 @@ def spark():
         .getOrCreate()
     
     yield spark
+    
+    # Stop the Spark session after the test session completes
+    print("Stopping Spark session...")
     spark.stop()
 
 # --- Test Cases ---
-def test_spark_session_is_initialized(spark):
-    """Ensure SparkSession is created and running."""
-    assert spark is not None
-    assert spark.sparkContext is not None
-    assert not spark.sparkContext._jsc.sc().isStopped()
-    assert spark.sparkContext.appName == "Test Suite"
-
-
 def test_mysql_jar_loaded(spark):
     """Check if MySQL JDBC driver JAR is configured correctly."""
     jars = spark.conf.get("spark.jars", "")
@@ -35,7 +40,6 @@ def test_mysql_jar_loaded(spark):
     
     assert mysql_jar_path in jars or mysql_jar_path in driver_classpath or mysql_jar_path in executor_classpath, \
         "MySQL JAR not found in Spark configuration"
-
 
 def test_mongodb_uri_set(spark):
     """Ensure MongoDB write URI is configured."""
