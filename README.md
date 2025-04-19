@@ -93,12 +93,12 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
       Improvements:
    
       •	Use Kafka as an ingestion layer: Decouples producers (orders, apps) from consumers (pipelines), buffering incoming events and 
-         protecting 
-         downstream services.
+         protecting downstream services.
       
       •	Introduce retry logic & dead-letter queues (DLQs) in my ingestion.
    
-      •	Deploy Spark on a Databricks managed cluster: This service automatically handle failures and retries better.
+      •	Deploy Spark on a Databricks managed cluster: This service automatically handle failures and retries better than self-managed Spark in 
+         Docker.
   
    
 5. What data patterns would you use ?
