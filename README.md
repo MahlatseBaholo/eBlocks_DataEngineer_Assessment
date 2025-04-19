@@ -67,7 +67,7 @@
    
       •	Since current architecture does not have lot of tables, complex relationships, no indexes, I will use Azure Database for MySQL as the target database and perform incremental data migration.
    
-      •	I will setup the Azure Database for MySQL, implement Azure Virtual Network (VNet) for secure network connectivity and a VPN Gateway to establish a secure, low-latency connection between on-premises and            Azure. Enable Azure Active Directory (AAD) for authentication and secure access to the cloud resources. Set up Azure Key Vault to securely manage database credentials and encryption keys.
+      •	I will setup the Azure Database for MySQL, implement Azure Virtual Network (VNet) for secure network connectivity and a VPN Gateway to establish a secure, low-latency connection between on-premises and Azure. Enable Azure Active Directory (AAD) for authentication and secure access to the cloud resources. Set up Azure Key Vault to securely manage database credentials and encryption keys.
    
       •	I will use the lift and shit method to move the entire MySQL database to the cloud using Azure Database Migration Service (DMS).
    
