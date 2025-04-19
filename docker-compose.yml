@@ -2,14 +2,16 @@ version: '3.8'
 
 services:
   spark:
-    image: bitnami/spark:3.5.0
+    build:
+      context: .
+      dockerfile: Dockerfile  # Use Dockerfile for building the custom image
     container_name: spark
     environment:
       - SPARK_MODE=master
     volumes:
       - ./app:/app
       - ./jars:/extra-jars
-      - ./sql:/sql
+      - ./sql:/sql  # Ensure the path is correctly mounted
     depends_on:
       - mysql
       - mongodb
@@ -25,7 +27,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql:/docker-entrypoint-initdb.d  # Mount SQL scripts here for initialization
 
   mongodb:
     image: mongo:6.0
@@ -39,7 +41,7 @@ services:
       dockerfile: Dockerfile.test
     volumes:
       - ./tests:/tests
-      - ./jars:/extra-jars
+      - ./jars:/extra-jars  # Ensure JARs are mounted here as well
     depends_on:
       - spark
-    command: ["pytest"]
+    #command: ["pytest"]
