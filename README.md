@@ -18,14 +18,15 @@
 
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 
-   Scripts are placed in root folder, namely:
-   
-   Dockerfile.test, requirements.txt,
+   Script placed in root folder, namely:
 
    The main script is placed under the app folder, namely:
-   
-   predict_next_order_date.py
 
+   predict_next_order_date.py
+   
+   Dependency file placed in root folder, namely:
+   requirements.txt
+   
    Scripts for testing are placed in this order:
 
    Dockerfile.test is in the root folder.
