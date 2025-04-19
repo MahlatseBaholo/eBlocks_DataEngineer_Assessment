@@ -172,6 +172,9 @@ Please provide scripts and results for the following:
    Saturday with 97 orders.
    
 3. Which time of the day do people order the most?
+
+   12 AM with 600 orders.
+
 4. Which order does the user buy first most of the time?
 5. What is the time interval that a user tends to purchase again?
 6. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
