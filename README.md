@@ -8,7 +8,7 @@
    
 3. Script 2- Create a script to import the orders details information into the mysql database.
 
-   Scripts are palced under the sql folder, namely:
+   Scripts are placed under the sql folder, namely:
 
    create_schema_and_tables.sql, insert_data.sql
    
