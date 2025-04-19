@@ -1,18 +1,15 @@
--- Step 1: Get each customer's first order based on order_date
+-- Step 1: Get first order (smallest order_date) per customer using a subquery
 WITH first_orders AS (
-    SELECT 
-        o.customer_id,
-        MIN(o.order_date) AS first_order_date
-    FROM 
-        orders o
-    WHERE 
-        o.customer_id IS NOT NULL
-        AND o.order_date IS NOT NULL
-    GROUP BY 
-        o.customer_id
+    SELECT o.customer_id, o.id AS first_order_id
+    FROM orders o
+    WHERE o.order_date = (
+        SELECT MIN(o2.order_date)
+        FROM orders o2
+        WHERE o2.customer_id = o.customer_id
+    )
 ),
 
--- Step 2: Get product(s) from the order_details of those first orders
+-- Step 2: Get the products from the first order
 first_order_products AS (
     SELECT 
         f.customer_id,
@@ -20,14 +17,10 @@ first_order_products AS (
     FROM 
         first_orders f
     JOIN 
-        order_details od ON f.first_order_date = (
-            SELECT MIN(o.order_date) 
-            FROM orders o 
-            WHERE o.id = od.order_id
-        )
+        order_details od ON f.first_order_id = od.order_id
 )
 
--- Step 3: Count how many times each product appears as the first product bought
+-- Step 3: Count how often each product appears as a first purchase
 SELECT 
     p.product_name,
     fop.product_id,
