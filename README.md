@@ -168,6 +168,7 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
 Please provide scripts and results for the following:
 
 1. Which day of the week has the most orders?
+   Saturday with 97 orders.
 2. Which time of the day do people order the most?
 3. Which order does the user buy first most of the time?
 4. What is the time interval that a user tends to purchase again?
