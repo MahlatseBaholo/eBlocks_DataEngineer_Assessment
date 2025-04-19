@@ -176,5 +176,12 @@ Please provide scripts and results for the following:
    12 AM with 600 orders.
 
 4. Which order does the user buy first most of the time?
+
+   Moto Play has been purchased 48 times by users as a first-time product.
+
+
 5. What is the time interval that a user tends to purchase again?
-6. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
+
+
+6. 
+7. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
