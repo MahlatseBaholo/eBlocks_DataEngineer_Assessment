@@ -99,8 +99,21 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    
       •	Deploy Spark on a Databricks managed cluster: This service automatically handle failures and retries better than self-managed Spark in 
          Docker.
-  
+
+   b) Scalability (Horizontal & Elastic Scaling)
    
+      Goal: Automatically handle growing data and traffic without manual intervention.
+      Improvements:
+   
+      •	Use Databricks jobs to scale compute on demand.
+   
+      •	Partition MySQL/MongoDB datasets by state to reduce contention and improve parallel processing.
+   
+      •	Optimize PySpark with partitioning, caching, and predicate pushdown to make better use of resources.
+   
+      •	Use Azure Cosmos DB instead of raw MongoDB if my workloads are truly global — Cosmos handles autoscaling and global distribution 
+         natively.
+    
 5. What data patterns would you use ?
    
    •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
