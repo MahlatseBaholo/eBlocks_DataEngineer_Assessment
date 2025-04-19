@@ -16,6 +16,7 @@
    
 7. Explain your choice in context of the CAP Theorem?
    MySQL (CA – Consistency and Availability)
+   
    MySQL, being a traditional relational database, prioritizes:
    •	Consistency: Every read receives the most recent write. MySQL enforces ACID (Atomicity, Consistency, Isolation, Durability) properties,          which ensure that transactions are reliable and data remains in a valid state.
    •	Availability: MySQL is designed to be reliably available on single-node or master-slave architectures, meaning the system remains                responsive as long as there's no network partition.
