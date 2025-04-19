@@ -2,15 +2,11 @@
 
 1. Script 1- Create a docker script to start an existing mysql docker instance.
    
-   Scripts are placed under the root folder, namely:
-   
-   Dockerfile, docker-compose.yml
+   Scripts are placed under the root folder: Dockerfile, docker-compose.yml
    
 3. Script 2- Create a script to import the orders details information into the mysql database.
 
-   Scripts are placed under the sql folder, namely:
-
-   create_schema_and_tables.sql, insert_data.sql
+   Scripts are placed under the sql folder: create_schema_and_tables.sql, insert_data.sql
    
 5. Script 3- Write a Scala or Python Spark or scala script that would do the following:
    
@@ -22,7 +18,7 @@
    
    Dependency file placed in root folder: requirements.txt
    
-   Scripts for testing are placed in this order: Dockerfile.test is in the root folder.
+   Dockerfile for testing placed in the root folder: Dockerfile.test
 
    Testing scripts are placed in the tests folder: conftest.py, test_data_quality.py, test_integration.py, test_performance.py, test_schema.py
    
