@@ -95,6 +95,10 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    Security: Azure Managed Indenties, Azure Key Vault
    
 3. Why would you choose these technologies?
+
+   Reliablity:
+   
+   Azure Event Hubs:    
    
 5. What data patterns would you use ?
   
