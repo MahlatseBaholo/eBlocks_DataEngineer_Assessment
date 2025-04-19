@@ -1,6 +1,24 @@
 version: '3.8'
 
 services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./tests:/tests
+      - ./jars:/extra-jars  # Ensure JARs are mounted here as well
+    depends_on:
+      - mysql
+      - mongodb
+    command: ["pytest", "/tests"]  # Ensure pytest runs automatically when the container starts
+    healthcheck:
+      test: ["CMD", "pytest", "--maxfail=1", "--disable-warnings", "/tests"]  # Check if tests pass
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+
   spark:
     build:
       context: .
@@ -15,6 +33,8 @@ services:
     depends_on:
       - mysql
       - mongodb
+      - test  # Ensure `test` service has completed before spark starts
+    # Note: Docker will only start this service once the test container is healthy
 
   mysql:
     image: mysql:8
@@ -34,14 +54,3 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
-
-  test:
-    build:
-      context: .
-      dockerfile: Dockerfile.test
-    volumes:
-      - ./tests:/tests
-      - ./jars:/extra-jars  # Ensure JARs are mounted here as well
-    depends_on:
-      - spark
-    #command: ["pytest"]
