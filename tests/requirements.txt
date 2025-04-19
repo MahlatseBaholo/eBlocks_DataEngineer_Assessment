@@ -1,5 +1,0 @@
-pymongo
-numpy
-pandas
-mysql-connector-python
-pytest
