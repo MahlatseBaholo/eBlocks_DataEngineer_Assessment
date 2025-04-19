@@ -204,9 +204,22 @@ Please provide scripts and results for the following:
 7. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
    
    3 records where deleted.
-   
+
+   Step 1:
    The script drops the existing foreign key constraint that prevents deletion of an orders record since it's referenced in order_details.
-   Adds a new foreign key constraint with ON DELETE CASCADE, which means that when an order is deleted from the orders table, all related rows in the order_details table will be automatically deleted.
+   Adds a new foreign key constraint with ON DELETE CASCADE, which means that when an order is deleted from the orders table, all related rows in the order_details table will be automatically deleted. Without this, trying to delete orders that have order details would fail with a foreign key constraint error. Cascading deletes allow safe cleanup without needing to manually delete from order_details first.
    
-   Without this, trying to delete orders that have order details would fail with a foreign key constraint error. Cascading deletes allow safe cleanup without needing to manually delete from order_details first.
+   Step 2:
+   Finds the most recent order date for each customer. This gives us the "latest order" timeframe that we want to target for cleanup (we’ll keep one and delete any duplicates on that same date).
+
+   Step 3:
+   Joins the orders table with the CTE (latest_order_dates) to retrieve all orders that match each customer's latest order date.
+
+   Some customers might have multiple orders on their latest date, those are potential duplicates.
+
+   Step 4:
+   Assigns a row number (rn) to each order per customer on their latest order date a
+
+   Step 5:
+   Delete orders where (rn > 1) as these are duplicates.
 
