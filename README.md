@@ -202,3 +202,11 @@ Please provide scripts and results for the following:
    It takes on average 49 days for a user to make another purchase.
 
 7. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
+   
+3 records where deleted.
+
+The script drops the existing foreign key constraint that prevents deletion of an orders record since it's referenced in order_details.
+Adds a new foreign key constraint with ON DELETE CASCADE, which means that when an order is deleted from the orders table, all related rows in the order_details table will be automatically deleted.
+
+Without this, trying to delete orders that have order details would fail with a foreign key constraint error. Cascading deletes allow safe cleanup without needing to manually delete from order_details first.
+
