@@ -177,8 +177,7 @@ Please provide scripts and results for the following:
 
 4. Which order does the user buy first most of the time?
 
-   Moto Play has been purchased 48 times by users as a first-time product.
-
+   Canon T90 has been purchased 17 times by users as a first-time product.
 
 5. What is the time interval that a user tends to purchase again?
 
