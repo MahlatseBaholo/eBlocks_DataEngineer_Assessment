@@ -180,7 +180,7 @@ Please provide scripts and results for the following:
    Canon T90 has been purchased 17 times by users as a first-time product.
 
 5. What is the time interval that a user tends to purchase again?
+   
+   It takes on average 49 days for a user to make another purchase.
 
-
-6. 
 7. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
