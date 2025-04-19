@@ -1,13 +1,23 @@
 # eBlocks_DataEngineer_Assessment
 
 1. Script 1- Create a docker script to start an existing mysql docker instance.
-2. Script 2- Create a script to import the orders details information into the mysql database.
-3. Script 3- Write a Scala or Python Spark or scala script that would do the following:
+   
+   Scripts are placed under the root folder, namely:
+   
+   Dockerfile, docker-compose.yml
+   
+3. Script 2- Create a script to import the orders details information into the mysql database.
+
+   Scripts are palced under the sql folder, namely:
+
+   create_schema_and_tables.sql, insert_data.sql
+   
+5. Script 3- Write a Scala or Python Spark or scala script that would do the following:
    
    a. Predict the next order date for a customer, based on his purchase patterns.
    
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
-5. Explain under which conditions you would use MySQL and Mongo?
+6. Explain under which conditions you would use MySQL and Mongo?
 
    MySQL: I would use MySQL because I’m working with structured, relational data that follows a well-defined schema. MySQL is ideal for handling normalized data with clear relationships (e.g., foreign keys) and is well-suited for operations like joins, aggregations, and complex queries. It also ensures data integrity through ACID compliance, which is important when working with transactional data such as customer orders and purchase history.
    
