@@ -27,6 +27,18 @@
 
    In this case, working with structured, transactional data where data integrity and accuracy matter most MySQL’s CA traits make it a strong       fit.
 
+   MongoDB (CP – Consistency and Partition Tolerance)
+   
+   MongoDB, as a NoSQL database, emphasizes:
+   
+   •	Partition Tolerance: MongoDB is built to work in distributed environments. It handles network splits and still tries to function, though         certain trade-offs may apply.
+   
+   •	Consistency: MongoDB can be strongly consistent by default in a replica set—reads and writes go to the primary node unless configured             otherwise.
+   
+   •	Availability: In the face of partitions, MongoDB may sacrifice availability (e.g., if no primary is available in a replica set) to ensure        consistency and avoid stale reads or writes.
+   
+   In this case, MongoDB’s CP characteristics makes it ideal when the data model is more flexible, evolves over time, and scales horizontally.
+
 9. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
    a. What technologies would you use in the cloud stack?
    b. How would you move data from on premises (MySQL) to the cloud.
