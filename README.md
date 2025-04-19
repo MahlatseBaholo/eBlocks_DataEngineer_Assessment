@@ -73,7 +73,7 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
 
 1. What technologies would you use?
    
-   Ingestion Layer: Azure Event Hubs
+   Ingestion Layer: Kafka
    
    Processing Layer: Azure Databricks
    
