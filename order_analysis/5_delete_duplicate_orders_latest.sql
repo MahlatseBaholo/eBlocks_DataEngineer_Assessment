@@ -1,3 +1,4 @@
+-- Step 1: Drops the existing foreign key constraint that prevents deletion of an orders record since it's referenced in order_details.
 ALTER TABLE order_details
 DROP FOREIGN KEY fk_order_details__orders;
 
@@ -6,7 +7,7 @@ ADD CONSTRAINT fk_order_details__orders
 FOREIGN KEY (order_id) REFERENCES orders(id)
 ON DELETE CASCADE;
 
--- Step 1: Get the latest order_date per customer
+-- Step 2: Get the latest order_date per customer
 WITH latest_order_dates AS (
     SELECT 
         customer_id,
@@ -20,7 +21,7 @@ WITH latest_order_dates AS (
         customer_id
 ),
 
--- Step 2: Get all orders that happened on the customer's latest order date
+-- Step 3: Get all orders that happened on the customer's latest order date
 latest_orders AS (
     SELECT 
         o.*
@@ -32,7 +33,7 @@ latest_orders AS (
            AND o.order_date = lod.latest_order_date
 ),
 
--- Step 3: Rank those orders per customer on the latest date
+-- Step 4: Rank those orders per customer on the latest date
 ranked_orders AS (
     SELECT 
         id AS order_id,
@@ -44,7 +45,7 @@ ranked_orders AS (
         latest_orders
 )
 
--- Step 4: Delete only duplicates (rn > 1)
+-- Step 5: Delete only duplicates (rn > 1)
 DELETE FROM orders
 WHERE id IN (
     SELECT order_id
