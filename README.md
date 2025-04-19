@@ -81,8 +81,22 @@ You must provide detailed files for script 1, 2 and 3.
 On the day ofBlackFriday, you realize that you have a large number of orders, explain how you would make changes to your data engineering architecture to be more robust, scalable, reliable and real time.
 
 1. What technologies would you use?
-2. Why would you choose these technologies?
-3. What data patterns would you use ?
+   
+   Ingestion Layer: Azure Event Hubs
+   
+   Processing Layer: Azure Databricks
+   
+   Storage Layer: Azure Database for MySQL Server, Azure Cosmos DB
+   
+   Analytics Layer: Power BI
+
+   Monitoring: Azure Monitor
+
+   Security: Azure Managed Indenties, Azure Key Vault
+   
+3. Why would you choose these technologies?
+   
+5. What data patterns would you use ?
   
 # Order Analysis
 
