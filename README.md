@@ -18,23 +18,13 @@
 
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 
-   Script placed in root folder, namely:
-
-   The main script is placed under the app folder, namely:
-
-   predict_next_order_date.py
+   The main script is placed under the app folder: predict_next_order_date.py
    
-   Dependency file placed in root folder, namely:
+   Dependency file placed in root folder: requirements.txt
    
-   requirements.txt
-   
-   Scripts for testing are placed in this order:
+   Scripts for testing are placed in this order: Dockerfile.test is in the root folder.
 
-   Dockerfile.test is in the root folder.
-
-   Testing scripts are placed in the tests folder, namely:
-   
-   conftest.py, test_data_quality.py, test_integration.py, test_performance.py, test_schema.py
+   Testing scripts are placed in the tests folder: conftest.py, test_data_quality.py, test_integration.py, test_performance.py, test_schema.py
    
 7. Explain under which conditions you would use MySQL and Mongo?
 
