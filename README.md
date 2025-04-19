@@ -89,7 +89,24 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    Azure Event Hubs:    
    
 5. What data patterns would you use ?
-  
+   •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
+      topics, enabling real-time processing and analysis.
+   
+   •	Stream Processing: Utilize Apache Spark's streaming capabilities to process the order data in real-time, perform aggregations, 
+      enrichments, and apply business rules.
+   
+   •	Microservices Architecture: Decompose the system into microservices that can independently handle different aspects of order processing, 
+      such as inventory management, payment processing, and shipping.
+   
+   •	Caching: Use in-memory caching technologies like Azure Cache for Redis to cache frequently accessed data, such as customer information, 
+      product details, and pricing information, to improve response times and reduce database load.
+   
+   •	Batch Processing: Utilize Apache Spark to process historical order data and generate insights. This can help in analyzing trends, 
+      customer behaviour, and planning for future Black Friday events.
+   
+   •	Monitoring and Alerting: Implement monitoring and alerting mechanisms to detect anomalies, performance bottlenecks, and failures in the 
+      data processing pipeline. Tools like Grafana can be used for monitoring and visualization.
+    
 # Order Analysis
 
 Please provide scripts and results for the following:
