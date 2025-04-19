@@ -24,8 +24,8 @@
       
       Dockerfile for testing placed in the root folder: Dockerfile.test
    
-      Testing scripts are placed in the tests folder: conftest.py, test_data_quality.py, test_integration.py, test_performance.py, 
-      test_schema.py
+      Testing scripts are placed in the tests folder: test_integration.py, test_data_quality.py, test_integration.py, test_performance.py, 
+      test_prediction_output.py
    
 7. Explain under which conditions you would use MySQL and Mongo?
 
