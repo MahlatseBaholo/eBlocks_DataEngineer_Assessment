@@ -23,6 +23,8 @@
    
    •	Availability: MySQL is designed to be reliably available on single-node or master-slave architectures, meaning the system remains                responsive as long as there's no network partition.
 
+   •	Partition Tolerance: MySQL does not natively prioritize partition tolerance. In distributed systems, if a network failure happens between        nodes, MySQL will typically sacrifice availability to preserve consistency. This makes it less ideal for large, distributed environments         with potential network issues.
+
    In this case, working with structured, transactional data where data integrity and accuracy matter most MySQL’s CA traits make it a strong       fit.
 
 9. Explain and draw a diagram on how you would design the above architecture in the cloud (Azure or AWS).
