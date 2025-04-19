@@ -168,8 +168,10 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
 Please provide scripts and results for the following:
 
 1. Which day of the week has the most orders?
+   
    Saturday with 97 orders.
-2. Which time of the day do people order the most?
-3. Which order does the user buy first most of the time?
-4. What is the time interval that a user tends to purchase again?
-5. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
+   
+3. Which time of the day do people order the most?
+4. Which order does the user buy first most of the time?
+5. What is the time interval that a user tends to purchase again?
+6. Write a mysql script on how to delete the duplicate orders, of the latest date, please explain the script in detail?
