@@ -89,6 +89,7 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    Azure Event Hubs:    
    
 5. What data patterns would you use ?
+   
    •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
       topics, enabling real-time processing and analysis.
    
