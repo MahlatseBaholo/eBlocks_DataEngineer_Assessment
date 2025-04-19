@@ -113,7 +113,19 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    
       •	Use Azure Cosmos DB instead of raw MongoDB if my workloads are truly global — Cosmos handles autoscaling and global distribution 
          natively.
-    
+
+    c) Performance Efficiency (Low Latency & Fast Processing)
+   
+      Goal: Deliver insights and responses in near-real-time.
+   
+      Improvements:
+   
+      •	Switch to streaming ETL with PySpark Structured Streaming.
+   
+      •	Use Delta Lake on Databricks to enable fast, atomic reads/writes for massive datasets.
+   
+      •	Move toward real-time dashboards using Power BI with DirectQuery on my Cosmos DB layers.
+
 5. What data patterns would you use ?
    
    •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
