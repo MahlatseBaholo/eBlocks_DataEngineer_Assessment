@@ -86,10 +86,20 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    Security: Azure Managed Indenties, Azure Key Vault
    
 3. Why would you choose these technologies?
+   a)	Reliability (Resilience and Fault Tolerance)
 
-   Reliablity:
+      Goal: Ensure the system can recover gracefully from failures and continue functioning during unexpected loads.
    
-   Azure Event Hubs:    
+      Improvements:
+   
+      •	Use Kafka as an ingestion layer: Decouples producers (orders, apps) from consumers (pipelines), buffering incoming events and 
+         protecting 
+         downstream services.
+      
+      •	Introduce retry logic & dead-letter queues (DLQs) in my ingestion.
+   
+      •	Deploy Spark on a Databricks managed cluster: This service automatically handle failures and retries better.
+  
    
 5. What data patterns would you use ?
    
