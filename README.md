@@ -17,6 +17,8 @@
    The main script is placed under the app folder: predict_next_order_date.py
    
    Dependency file placed in root folder: requirements.txt
+
+   JARS are placed under the jars folder: mongo-spark-connector_2.12-10.4.1-all.jar, mysql-connector-j-8.0.33.jar
    
    Dockerfile for testing placed in the root folder: Dockerfile.test
 
