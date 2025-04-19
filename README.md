@@ -15,16 +15,29 @@
 5. Script 3- Write a Scala or Python Spark or scala script that would do the following:
    
    a. Predict the next order date for a customer, based on his purchase patterns.
-   
+
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
-6. Explain under which conditions you would use MySQL and Mongo?
+
+   Scripts are placed in root folder, namely:
+   Dockerfile.test, requirements.txt,
+
+   The main script is placed the app folder, namely:
+   predict_next_order_date.py
+
+   Scripts for testing are placed in this order:
+
+   Dockerfile.test is in the root folder.
+
+   testing scripts are placed in the tests folder, namely:
+   conftest.py, test_data_quality.py, test_integration.py, test_performance.py, test_schema.py
+7. Explain under which conditions you would use MySQL and Mongo?
 
    MySQL: I would use MySQL because I’m working with structured, relational data that follows a well-defined schema. MySQL is ideal for handling normalized data with clear relationships (e.g., foreign keys) and is well-suited for operations like joins, aggregations, and complex queries. It also ensures data integrity through ACID compliance, which is important when working with transactional data such as customer orders and purchase history.
    
    MongoDB: I would use MongoDB because I’m dealing with semi-structured or evolving data where the schema isn’t fixed and is expected to change over time. MongoDB offers flexibility in how data is modeled and supports horizontal scalability, making it a good fit for large datasets. It's optimized for fast read/write performance, especially in use cases involving high volumes of data, such as storing prediction 
    results that don't necessarily fit into a strict relational model.
    
-7. Explain your choice in context of the CAP Theorem?
+8. Explain your choice in context of the CAP Theorem?
    MySQL (CA – Consistency and Availability)
    
    MySQL, being a traditional relational database, prioritizes:
