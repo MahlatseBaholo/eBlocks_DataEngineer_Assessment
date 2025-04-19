@@ -126,6 +126,16 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    
       •	Move toward real-time dashboards using Power BI with DirectQuery on my Cosmos DB layers.
 
+      d)	Security (Data Protection & Access Control)
+   
+      Goal: Secure data at rest and in motion, and control access tightly during peak events.
+   
+      Improvements:
+   
+      •	Use Managed Identities and Azure Key Vault to securely manage credentials for MySQL/MongoDB access.
+   
+      •	Implement row-level or column-level security for sensitive data in Databricks.
+
 5. What data patterns would you use ?
    
    •	Event-driven Architecture: Implement an event-driven architecture using Apache Kafka. Orders can be published as events to Kafka       
