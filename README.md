@@ -104,6 +104,7 @@ On the day ofBlackFriday, you realize that you have a large number of orders, ex
    Security: Azure Managed Indenties, Azure Key Vault
    
 3. Why would you choose these technologies?
+   
    a)	Reliability (Resilience and Fault Tolerance)
 
       Goal: Ensure the system can recover gracefully from failures and continue functioning during unexpected loads.
