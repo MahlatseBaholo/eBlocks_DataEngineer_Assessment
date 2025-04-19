@@ -14,15 +14,16 @@
 
    b. Only customers predicted to buying products in the next week( 7 days) must be placed in the mongo database.
 
-   The main script is placed under the app folder: predict_next_order_date.py
+      The main script is placed under the app folder: predict_next_order_date.py
+      
+      Dependency file placed in root folder: requirements.txt
    
-   Dependency file placed in root folder: requirements.txt
-
-   JARS are placed under the jars folder: mongo-spark-connector_2.12-10.4.1-all.jar, mysql-connector-j-8.0.33.jar
+      JARS are placed under the jars folder: mongo-spark-connector_2.12-10.4.1-all.jar, mysql-connector-j-8.0.33.jar
+      
+      Dockerfile for testing placed in the root folder: Dockerfile.test
    
-   Dockerfile for testing placed in the root folder: Dockerfile.test
-
-   Testing scripts are placed in the tests folder: conftest.py, test_data_quality.py, test_integration.py, test_performance.py, test_schema.py
+      Testing scripts are placed in the tests folder: conftest.py, test_data_quality.py, test_integration.py, test_performance.py, 
+      test_schema.py
    
 7. Explain under which conditions you would use MySQL and Mongo?
 
