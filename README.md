@@ -63,6 +63,8 @@
     
    a. What technologies would you use in the cloud stack?
    
+   Diagram placed in azure_architecture folder 
+   
    b. How would you move data from on premises (MySQL) to the cloud.
    
       •	Since current architecture does not have lot of tables, complex relationships, no indexes, I will use Azure Database for MySQL as the target database and perform incremental data migration.
