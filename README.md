@@ -77,8 +77,7 @@
    
       •	Following change management, I will decommission the on-premise database.
    
-      •	Set up Azure Monitor to track database performance and operational health. Use Azure Security Center to continuously monitor for any security vulnerabilities. Implement automated backups, data       
-         encryption, and other security measures to ensure the integrity and safety of data in the cloud. Schedule regular database maintenance tasks (e.g., indexing, query optimization).
+      •	Set up Azure Monitor to track database performance and operational health. Use Azure Security Center to continuously monitor for any security vulnerabilities. Implement automated backups, data    encryption, and other security measures to ensure the integrity and safety of data in the cloud. Schedule regular database maintenance tasks (e.g., indexing, query optimization).
    
       •	Regularly review cloud usage with Azure Cost Management. Optimize cloud resources based on usage patterns, scaling up or down where appropriate.
 
