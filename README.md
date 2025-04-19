@@ -64,6 +64,25 @@
    a. What technologies would you use in the cloud stack?
    
    b. How would you move data from on premises (MySQL) to the cloud.
+   
+      •	Since current architecture does not have lot of tables, complex relationships, no indexes, I will use Azure Database for MySQL as the target database and perform incremental data migration.
+   
+      •	I will setup the Azure Database for MySQL, implement Azure Virtual Network (VNet) for secure network connectivity and a VPN Gateway to establish a secure, low-latency connection between on-premises and            Azure. Enable Azure Active Directory (AAD) for authentication and secure access to the cloud resources. Set up Azure Key Vault to securely manage database credentials and encryption keys.
+   
+      •	I will use the lift and shit method to move the entire MySQL database to the cloud using Azure Database Migration Service (DMS).
+   
+      •	I will ensure that the data has been accurately migrated, verifying that it matches the original data and adheres to the required schema by following below steps.
+   
+      •	Plan for a cutover window during off-peak hours to minimize impact on users.
+   
+      •	Following change management, I will decommission the on-premise database.
+   
+      •	Set up Azure Monitor to track database performance and operational health. Use Azure Security Center to continuously monitor for any security vulnerabilities. Implement automated backups, data       
+         encryption, and other security measures to ensure the integrity and safety of data in the cloud. Schedule regular database maintenance tasks (e.g., indexing, query optimization).
+   
+      •	Regularly review cloud usage with Azure Cost Management. Optimize cloud resources based on usage patterns, scaling up or down where appropriate.
+
+
 
 You must provide detailed files for script 1, 2 and 3.
 
